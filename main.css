@@ -28,11 +28,17 @@ button:hover{
 
 #stickyNotes {
   display: flex; 
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
 }
 
 
 .card {
-  flex-wrap: wrap;
   background-image: url('./stickynote.png');
   background-size: 300px;
   width: 300px;
