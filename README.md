@@ -17,5 +17,6 @@ To delete a note, click on the grey 'x' on the top right corner of the note. The
 To seach through all the notes, enter the search field on the search bar at the top of the screen. If the search term matches any of the notes, it will be reflected on the screen. Else, the notes will be hidden from view.
 
 ### 4. Edit Note
+Not Done
 
 
