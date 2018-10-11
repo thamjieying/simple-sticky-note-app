@@ -29,7 +29,7 @@ function addNewNote(){
     let msgList = document.getElementsByClassName('card')
     
     // get edit modal
-    card.addEventListener('click', function(e) {
+    msg.addEventListener('click', function(e) {
       let editModal = document.getElementById('editNoteModal')
       editModal.style.display = "block";
       let msg = e.target.textContent
