@@ -2,11 +2,11 @@ function addNewNote(){
   let board = document.getElementById('stickyNotes')
   let card = document.createElement('div')
   card.className = 'card'
-
+  
   // create msg element
   let msg = document.createElement('p')
   msg.className = 'msg'
-
+  
   // create close button
   let close = document.createElement('span')
   let closeTxt = document.createTextNode("\u00D7")
@@ -21,14 +21,23 @@ function addNewNote(){
   // get input values
   let inputValue = document.getElementById('input').value
   let text = document.createTextNode(inputValue)
-  console.log('text', text)
   
   if(inputValue === ''){
     alert('Please enter a note')
   }else{
     //get msg index 
     let msgList = document.getElementsByClassName('card')
-    console.log(msgList.length)
+    
+    // get edit modal
+    card.addEventListener('click', function(e) {
+      let editModal = document.getElementById('editNoteModal')
+      editModal.style.display = "block";
+      let msg = e.target.textContent
+      // console.log('editModal', editModal.childNodes[1])
+      console.log('click on text', e.target)
+      editModal.referenceNode = e.target
+      editModal.childNodes[1].childNodes[3].value = msg
+    })
 
     // append msg and close button to card
     msg.innerText=inputValue
@@ -44,10 +53,10 @@ function addNewNote(){
 }
 
 // search bar
-const search = document.getElementById('search');
+let search = document.getElementById('search');
 search.addEventListener('keyup', function(e){
-  const term = e.target.value.toLowerCase()
-  const list = document.getElementsByClassName('card')
+  let term = e.target.value.toLowerCase()
+  let list = document.getElementsByClassName('card')
   
   Array.from(list).forEach(function(note){
     let msgs = note.childNodes[1].textContent
@@ -63,4 +72,14 @@ search.addEventListener('keyup', function(e){
   })
 })
 
-// edit text
+// edit 
+function updateNewNote(e){
+  const msg = e.parentElement.parentElement.referenceNode
+  console.log('click to edit', msg)
+  // get input values
+  let inputValue = document.getElementById('editInput').value
+  let text = document.createTextNode(inputValue)
+  console.log('input value', inputValue)
+  msg.innerText = inputValue
+  document.getElementById('editNoteModal').style.display = "none"
+}

@@ -27,7 +27,7 @@ input {
   width: 100%;
 }
 
-.addBtn {
+.addBtn, .editBtn {
   font-size: 2vw;
 }
 
