@@ -1,0 +1,56 @@
+body {
+  /* background-color: grey;  */
+}
+
+
+header {
+  border: 1px solid black;
+  text-align: center;
+  background-color: bisque;
+  font-size: 1vw;
+}
+
+#stickyNotes {
+  min-height: 50vh;
+}
+
+button, #addNote {
+  border: none;
+  color: white;
+  background-color: grey;
+}
+
+#addNote{
+  border-radius: 50%;
+  font-size: 2vw;
+  width: 3vw;
+  height: 3vw;
+}
+
+button:hover{
+  background-color: lightgrey;
+}
+
+#stickyNotes {
+  display: flex; 
+}
+
+
+.card {
+  flex-wrap: wrap;
+  background-image: url('./stickynote.png');
+  background-size: 300px;
+  width: 300px;
+  height: 300px;
+}
+
+.msg{
+  display: inline-block;
+  padding: 20px 52px;
+  font-size: 2em;
+  text-align: center;
+  width: 62%;
+  max-height: 65%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}

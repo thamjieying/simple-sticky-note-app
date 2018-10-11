@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sticky Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./modal/modal.css" />
+</head>
+<body>
+  <header>
+    <h1>My Sticky Note</h1>
+  </header>
+  <main>
+    <input type='text' placeholder="Search" id='search'>
+    <div id='stickyNotes'>
+
+    </div>
+    <button id='addNote'>+</button>
+  </main>
+  <!-- model -->
+  <div id='addNoteModal' class='modal'>
+    <div class='modal-content'>
+        <span class="close">&times;</span>
+        <input type="text" id="input" placeholder="New Note" maxlength="48">
+        <button onclick="addNewNote()" class="addBtn">Add</button>
+    </div>
+  </div>
+
+  <!-- script functions -->
+  <script src="./main.js"></script>
+  <script src="./modal/modal.js"></script>
+</body>
+</html>
